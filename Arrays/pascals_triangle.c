@@ -18,6 +18,7 @@ int main()
         }
             printf("1\n");
     }
+    return 0;
 }
 
 int fact(int n)
