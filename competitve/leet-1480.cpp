@@ -34,11 +34,10 @@ class Solution
 public:
   vector<int> runningSum(vector<int> &nums)
   {
-    auto sum = 0;
-    for (int i = 0; i < nums.size(); i++)
+    for (auto i = 0; i < nums.size(); i++)
     {
-      sum += nums[i];
-      nums[i] = sum;
+      if (i > 0)
+        nums[i] += nums[i - 1];
     }
     return nums;
   }
